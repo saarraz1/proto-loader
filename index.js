@@ -36,7 +36,7 @@ module.exports = function (source) {
 						return;
 					}
 					loaded[fileName] = true;
-					data.imports[index] = readProto(fs.readFileSync(fileName).toString('utf8'), {}, loaded);
+					data.imports[index] = readProto(fs.readFileSync(fileName).toString('utf8'), options, loaded);
 					return;
 				}
 				throw Error('File not found: ' + imp);
